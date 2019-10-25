@@ -4,6 +4,8 @@ A MagicMirror module to show local sunrise/sunset/noon times
 
 ![](https://raw.githubusercontent.com/prydonian/MMM-Sunrise-Sunset/master/Screenshot.png)
 
+![](https://raw.githubusercontent.com/prydonian/MMM-Sunrise-Sunset/master/List.png)
+
 ## Installation
 Run these commands at the root of your magic mirror install.
 
@@ -14,7 +16,7 @@ git clone https://github.com/prydonian/MMM-Sunrise-Sunset
 
 ## Using the module
 To use this module, add the following configuration block to the modules array in the `config/config.js` file.
-Works best in the bottom_bar position.
+Works best in the bottom_bar position when the layout is set to "inline".
 
 ```js
 var config = {
@@ -49,6 +51,12 @@ var config = {
 			<td><code>longitude</code></td>
 			<td>
       Your local longitude. e.g.: "12.789"
+			</td>
+		</tr>
+		<tr>
+			<td><code>layout</code></td>
+			<td>
+      "inline" or "list"
 			</td>
 		</tr>
 	</tbody>
