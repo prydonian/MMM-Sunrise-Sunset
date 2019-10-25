@@ -42,13 +42,13 @@ var config = {
 		<tr>
 			<td><code>latitude</code></td>
 			<td>
-      Your local latitude
+      Your local latitude. e.g.: "21.567"
 			</td>
 		</tr>
 		<tr>
 			<td><code>longitude</code></td>
 			<td>
-      Your local longitude
+      Your local longitude. e.g.: "12.789"
 			</td>
 		</tr>
 	</tbody>
