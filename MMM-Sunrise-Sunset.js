@@ -30,7 +30,7 @@ Module.register("MMM-Sunrise-Sunset",{
 	    var url = this.apiBase;
 	    if(this.config.layout === "inline"){
     	    $.getJSON( url, function( data ) {
-        		$('.sunrise').html('<i class="wi wi-sunrise"></i>'+data.results.sunrise + ' <i class="wi wi-sunset"></i>'+data.results.sunset + ' <i class="wi wi-day-sunny"></i>'+data.results.solar_noon);
+        		$('.sunrise').html('<i class="wi wi-sunrise"></i>'+data.results.sunrise + ' | <i class="wi wi-sunset"></i>'+data.results.sunset + ' | <i class="wi wi-day-sunny"></i>'+data.results.solar_noon);
         	});
     	}
 		if(this.config.layout === "list"){
