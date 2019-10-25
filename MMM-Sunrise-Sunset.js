@@ -22,7 +22,7 @@ Module.register("MMM-Sunrise-Sunset",{
 	},
     getDom: function() {
     	var wrapper = document.createElement("div");
-    	wrapper.className = "xsmall dimmed sunrise";
+    	wrapper.className = "small dimmed sunrise";
     	wrapper.innerHTML = "Loading...";
     	return wrapper;
     },
