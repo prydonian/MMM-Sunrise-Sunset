@@ -42,22 +42,23 @@ var config = {
 	<thead>
 	<tbody>
 		<tr>
-			<td><code>latitude</code></td>
+			<td><code>latitude</code>*</td>
 			<td>
       Your local latitude. e.g.: "21.567"
 			</td>
 		</tr>
 		<tr>
-			<td><code>longitude</code></td>
+			<td><code>longitude</code>*</td>
 			<td>
       Your local longitude. e.g.: "12.789"
 			</td>
 		</tr>
 		<tr>
-			<td><code>layout</code></td>
+			<td><code>layout</code>*</td>
 			<td>
       "inline" or "list"
 			</td>
 		</tr>
 	</tbody>
 </table>
+*required
