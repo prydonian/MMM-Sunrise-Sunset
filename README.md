@@ -2,7 +2,7 @@
 A MagicMirror module to show local sunrise/sunset/noon times
 > This is an extension to the [MagicMirror](https://github.com/MichMich/MagicMirror) project, allowing the display of local sunrise, sunset and solar noon times.
 
-![](https://raw.githubusercontent.com/prydonian/MMM-Sunrise-Sunset/master/.github/Screenshot.png)
+![](https://raw.githubusercontent.com/prydonian/MMM-Sunrise-Sunset/master/Screenshot.png)
 
 ## Installation
 Run these commands at the root of your magic mirror install.
