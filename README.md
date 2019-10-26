@@ -14,6 +14,13 @@ cd modules
 git clone https://github.com/prydonian/MMM-Sunrise-Sunset
 ```
 
+## Updating
+
+```shell
+cd MagicMirror/modules/MMM-Sunrise-Sunset
+git pull
+```
+
 ## Using the module
 To use this module, add the following configuration block to the modules array in the `config/config.js` file.
 Works best in the bottom_bar position when the layout is set to "inline".
