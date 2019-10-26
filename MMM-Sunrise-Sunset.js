@@ -4,6 +4,8 @@ Module.register("MMM-Sunrise-Sunset",{
 		longitude: "",
 		timezone: "Europe/London",
 		daylength: true,
+		civil_twilight_begin: true,
+		civil_twilight_end: true,
 		layout: "inline",
 		updateInterval: 3600000
 	},
@@ -23,7 +25,7 @@ Module.register("MMM-Sunrise-Sunset",{
 	},
     getDom: function() {
     	var wrapper = document.createElement("div");
-    	wrapper.className = "small dimmed sunrise";
+    	wrapper.className = "small normal sunrise";
     	wrapper.innerHTML = "Loading...";
     	return wrapper;
     },
@@ -41,7 +43,7 @@ Module.register("MMM-Sunrise-Sunset",{
                 $('.sunrise').append(' | <i class="wi wi-sunset"></i>'+ sunset.format("hh:mm:ss a"));
                 $('.sunrise').append(' | <i class="wi wi-day-sunny"></i>'+ noon.format("hh:mm:ss a"));
                 if(this.config.daylength === "true") {
-                  $('.sunrise').append(' | <i class="wi wi-time-1"></i>'+ parseFloat(dat_length/120).toFixed(2));
+                  $('.sunrise').append(' | <i class="wi wi-time-1"></i>'+ parseFloat(day_length/120).toFixed(2));
                 }
         	});
     	}
@@ -52,11 +54,19 @@ Module.register("MMM-Sunrise-Sunset",{
     	        var sunset = moment.tz(data.results.sunset, offset);
     	        var noon = moment.tz(data.results.solar_noon, offset);
     	        var day_length = data.results.daylength;
+    	        var twilight_begin = moment.tz(data.results.civil_twilight_begin, offset);
+    	        var twilight_end = moment.tz(data.results.civil_twilight_end, offset);
+                if(this.config.civil_twilight_begin === "true") {
+                  $('.sunrise').append('<div><i class="wi wi-moonset"></i>'+ twilight_begin.format("hh:mm:ss a") + '</div>');
+                }
     	        $('.sunrise').append('<div><i class="wi wi-sunrise"></i>'+ sunrise.format("hh:mm:ss a") + '</div>');
                 $('.sunrise').append('<div><i class="wi wi-sunset"></i>'+ sunset.format("hh:mm:ss a") + '</div>');
+                if(this.config.civil_twilight_end === "true") {
+                  $('.sunrise').append('<div><i class="wi wi-moonset"></i>'+ twilight_end.format("hh:mm:ss a") + '</div>');
+                }
                 $('.sunrise').append('<div><i class="wi wi-day-sunny"></i>'+ noon.format("hh:mm:ss a") + '</div>');
                 if(this.config.daylength === "true") {
-                  $('.sunrise').append('<div><i class="wi wi-time-1"></i>'+ parseFloat(dat_length/120).toFixed(2) + '</div>');
+                  $('.sunrise').append('<div><i class="wi wi-time-1"></i>'+ parseFloat(day_length/120).toFixed(2) + '</div>');
                 }
     		});
     	}
