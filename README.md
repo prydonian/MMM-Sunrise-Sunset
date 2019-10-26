@@ -54,6 +54,12 @@ var config = {
 			</td>
 		</tr>
 		<tr>
+			<td><code>timezone</code>*</td>
+			<td>
+      Default: "Europe/London". Find yours at https://timezonedb.com/time-zones
+			</td>
+		</tr>
+		<tr>
 			<td><code>layout</code>*</td>
 			<td>
       "inline" or "list"
