@@ -1,0 +1,39 @@
+.sunrise {
+	overflow: hidden;
+}
+.sunrise i {
+	text-align: center;
+	width: 1.4em;
+}
+.sunrise table {
+	width: 100% !important;
+	position: relative !important;
+}
+.sunrise tr {
+	position: relative !important;
+}
+.sunrise td {
+	border-bottom: 1px solid #555555;
+	display: table-cell;
+	position: relative !important;
+}
+.right .sunrise table {
+	float: right;
+}
+.right .sunrise td {
+	text-align: right;
+}
+.right .sunrise tr {
+	float: right;
+	clear: right;
+}
+.sunrise table td.fw-icon {
+	width: 1.4em !important;
+	display: table-cell;
+	position: relative !important;
+}
+.sunrise table td.time {
+	min-width: 50px !important;
+	display: table-cell;
+	position: relative !important;
+}

@@ -61,10 +61,10 @@ var config = {
 			</td>
 		</tr>
 		<tr>
-			<td><code>timezone</code>*</td>
+			<td><code>apiKey</code>*</td>
 			<td>
-      Default: "Europe/London". Find yours at https://timezonedb.com/time-zones
-			</td>
+      Sign up at https://ipgeolocation.io/signup.html for a free API key
+   			</td>
 		</tr>
 		<tr>
 			<td><code>layout</code>*</td>
